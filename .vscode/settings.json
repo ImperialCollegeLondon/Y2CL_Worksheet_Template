@@ -6,7 +6,8 @@
         "**/settings.json": true,
 	"**/pyproject.toml": true,
 	"**/*egg-info": true,
-	"**/tests/": true
+	"**/tests/": true,
+	"**/LICENSE": true
     },
     "python.testing.pytestArgs": [
         "tests", "-vv"
