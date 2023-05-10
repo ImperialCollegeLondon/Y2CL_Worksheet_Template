@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/.*": true,
+        "**/__pycache__": true,
+        "**/venv": true,
+        "**/settings.json": true,
+	"**/pyproject.toml": true,
+	"**/*egg-info": true,
+	"**/tests/": true
+    },
+    "python.testing.pytestArgs": [
+        "tests", "-vv"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.typeCheckingMode": "basic"
+}
