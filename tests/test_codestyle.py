@@ -11,8 +11,9 @@ class TestStyle:
     def setup_class(self):
         """Setup."""
         project_path = os.path.split(os.path.dirname(__file__))[0]
-        course_file = glob(os.path.join(project_path, "src", "*.py"))
-        pylint_results = Run(course_file, exit=False)
+        course_files = glob(os.path.join(project_path, "src", "*.py"))
+        assert course_files, "No files to check!"
+        pylint_results = Run(course_files, exit=False)
         self.style_result = pylint_results.linter.stats.global_note  # pylint: disable=attribute-defined-outside-init
         # evaluation =  https://github.com/PyCQA/pylint/issues/2399
 

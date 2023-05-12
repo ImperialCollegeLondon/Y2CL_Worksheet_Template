@@ -8,7 +8,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 10
     },
     {
       "name": "test Relativity",
@@ -18,7 +18,37 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 10
+    },
+    {
+      "name": "test Shapes",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test MyModule",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test Coffeecake",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
     }
   ]
 }
