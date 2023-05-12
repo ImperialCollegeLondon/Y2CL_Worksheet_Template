@@ -16,5 +16,5 @@ jobs:
       - name: update pip setuptools and wheel
         run: sudo python -m pip install --upgrade pip setuptools wheel
       - name: Install local code in edit mode
-        run: python -m pip install -e .
+        run: python -m pip install --user -e .
       - uses: education/autograding@v1
