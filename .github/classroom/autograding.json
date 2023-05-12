@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "code style",
+      "setup": "",
+      "run": "pytest -vv tests/test_codestyle.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "test Relativity",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
