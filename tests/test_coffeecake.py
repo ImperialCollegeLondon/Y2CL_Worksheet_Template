@@ -5,7 +5,7 @@ import pytest
 def cc():
     return import_module("coffeecake")
 
-class TestTask11:
+class TestTask10:
     def test_module_exists(self, cc):
         pass
     def test_var_a(self, cc):
@@ -31,14 +31,21 @@ class TestTask11:
         assert cc.func3() is cc.a
     def test_func4_exists(self, cc):
         assert hasattr(cc, "func4")
-    def test_func5_exists(self, cc):
-        assert hasattr(cc, "func5")
-    def test_func5_output(self, cc):
-        a, b = cc.func5()
+    def test_func4_output(self, cc):
+        a, b = cc.func4()
         assert (a, b) == ("drunk", "eaten")
         assert a is cc.a
 
-class TestTask12:
+class TestTask11:
+    def test_func5_exists(self, cc):
+        assert hasattr(cc, "func5")
+
+    def test_func5_output_type(self, cc):
+        assert isinstance(cc.func5(), dict)
+
+    def test_func5_output(self, cc):
+        assert cc.func5()['a'] == "drunk"
+
     def test_func6_exists(self, cc):
         assert hasattr(cc, "func6")
 
@@ -46,13 +53,4 @@ class TestTask12:
         assert isinstance(cc.func6(), dict)
 
     def test_func6_output(self, cc):
-        assert cc.func6()['a'] == "drunk"
-
-    def test_func7_exists(self, cc):
-        assert hasattr(cc, "func7")
-
-    def test_func7_output_type(self, cc):
-        assert isinstance(cc.func7(), dict)
-
-    def test_func7_output(self, cc):
-        assert cc.func7()['a'] != "empty"
+        assert cc.func6()['a'] != "empty"

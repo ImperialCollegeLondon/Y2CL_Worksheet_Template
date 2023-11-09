@@ -6,13 +6,19 @@ import numpy as np
 def mm():
     return import_module("mymodule")
 
-class TestTask8:
+class TestTask7:
     def test_module_exists(self, mm):
         pass
 
-class TestTask9:
+class TestTask8:
     def test_import_np(self, mm):
         assert hasattr(mm, "_np")
+
+    def test_sqrt5_present(self, mm):
+        assert hasattr(mm, "_sqrt5")
+
+    def test_phi_present(self, mm):
+        assert hasattr(mm, "_phi")
 
     def test_fibo_exists(self, mm):
         assert hasattr(mm, "fibo")
