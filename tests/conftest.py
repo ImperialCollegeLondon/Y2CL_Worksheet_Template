@@ -65,6 +65,12 @@ def red_func(sh_funcs):
     _, red_func = list(sh_funcs.items())[0]
     return red_func
 
+
+@pytest.fixture()
+def sh_ab():
+    return import_module("shapes_abstraction")
+
+
 @pytest.fixture()
 def vh():
     return import_module("vehicles")

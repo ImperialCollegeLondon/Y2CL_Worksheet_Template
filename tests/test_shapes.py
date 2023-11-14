@@ -1,3 +1,4 @@
+from inspect import signature
 import numpy as np
 
 
@@ -201,3 +202,23 @@ class TestTask27:
         assert sh.Shape.num_red == 1
         ellipse.set("Green")
         assert sh.Shape.num_red == 0
+
+
+class TestTask28:
+    def test_eqtriangle_exists(self, sh):
+        assert "EquilateralTriangle" in vars(sh)
+
+    def test_eqtriangle_single_param(self, sh):
+        assert len(signature(sh.EquilateralTriangle).parameters) == 2
+
+    def test_square_exists(self, sh):
+        assert "Square" in vars(sh)
+
+    def test_square_single_param(self, sh):
+        assert len(signature(sh.Square).parameters) == 2
+
+    def test_circle_exists(self, sh):
+        assert "Circle" in vars(sh)
+
+    def test_circle_single_param(self, sh):
+        assert len(signature(sh.Circle).parameters) == 2

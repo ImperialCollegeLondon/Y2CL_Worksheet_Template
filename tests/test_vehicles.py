@@ -35,11 +35,11 @@ class TestTask21:
         assert "Car" in vars(vh), "Missing Car class."
 
     def test_car_construction(self, vh):
-        nparams = len(signature(vh.Car.__init__).parameters)
-        assert nparams in (2, 3), "Unusual number of parameters to Car __init__ method."
-        if nparams == 2:
+        nparams = len(signature(vh.Car).parameters)
+        assert nparams in (1, 2), "Unusual number of parameters to Car __init__ method."
+        if nparams == 1:
             vh.Car(engine=vh.Engine("petrol"))
-        elif nparams == 3:
+        elif nparams == 2:
             assert "Transmission" in vars(vh)
             vh.Car(engine=vh.Engine("petrol"), transmission=vh.Transmission("automatic", 5))
 
@@ -50,23 +50,23 @@ class TestTask21:
         start_mock = MagicMock()
         monkeypatch.setattr(vh.Engine, "start", start_mock)
 
-        nparams = len(signature(vh.Car.__init__).parameters)
-        if nparams == 2:
+        nparams = len(signature(vh.Car).parameters)
+        if nparams == 1:
             c = vh.Car(engine=vh.Engine("petrol"))
-        elif nparams == 3:
+        elif nparams == 2:
             assert "Transmission" in vars(vh)
             c = vh.Car(engine=vh.Engine("petrol"), transmission=vh.Transmission("automatic", 5))
         c.start()
         start_mock.assert_called_once()
 
     def test_car_start_prints(self, vh):
-        nparams = len(signature(vh.Car.__init__).parameters)
+        nparams = len(signature(vh.Car).parameters)
         stdout_buff = StringIO()
         sys.stdout, tmp_stdout = stdout_buff, sys.stdout        
-        assert nparams in (2, 3), "Unusual number of parameters to Car __init__ method."
-        if nparams == 2:
+        assert nparams in (1, 2), "Unusual number of parameters to Car __init__ method."
+        if nparams == 1:
             c = vh.Car(engine=vh.Engine("petrol"))
-        elif nparams == 3:
+        elif nparams == 2:
             assert "Transmission" in vars(vh)
             c = vh.Car(engine=vh.Engine("petrol"), transmission=vh.Transmission("automatic", 5))
         assert c.start() is None
