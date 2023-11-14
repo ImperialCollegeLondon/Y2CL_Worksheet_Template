@@ -1,73 +1,7 @@
-from importlib import import_module
-from types import FunctionType
 import numpy as np
-import pytest
-
-@pytest.fixture(scope="module")
-def sh():
-   return import_module("shapes1")
-
-# @pytest.fixture
-# def sh_namespace(sh):
-#     if "Shape" not in vars(sh):
-#         return {}
-#     return vars(sh.Shape)
-
-# @pytest.fixture
-# def sh_black(sh):
-#     sh1 = sh.Shape("Black")
-#     yield sh1  # incase the default has been set to red. This would mess up the counting tests.
-#     sh1.set("Black")
-
-# @pytest.fixture
-# def sq_namespace(sh):
-#     if "Square" not in vars(sh):
-#         return {}
-#     return vars(sh.Square)
-# @pytest.fixture
-# def tr_namespace(sh):
-#     if "Triangle" not in vars(sh):
-#         return {}
-#     return vars(sh.Triangle)
-# @pytest.fixture
-# def ci_namespace(sh):
-#     if "Circle" not in vars(sh):
-#         return {}
-#     return vars(sh.Circle)
-
-# @pytest.fixture
-# def square(sh):
-#     sh1 = sh.Square(12)
-#     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
-#     yield sh1
-#     sh1.set("Black")
-
-# @pytest.fixture
-# def triangle(sh):
-#     sh1 = sh.Triangle(12, 5)
-#     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
-#     yield sh1
-#     sh1.set("Black")
-
-# @pytest.fixture
-# def circle(sh):
-#     sh1 = sh.Circle(5.)
-#     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
-#     yield sh1
-#     sh1.set("Black")
-
-# @pytest.fixture
-# def sh_funcs(sh):
-#     return {k: v for k, v in vars(sh).items() if isinstance(v, FunctionType)}
-
-# @pytest.fixture
-# def red_func(sh_funcs):
-#     assert len(sh_funcs) == 1
-#     _, red_func = list(sh_funcs.items())[0]
-#     return red_func
 
 
-class TestTask21:
+class TestTask23:
     def test_shape_exists(self, sh):
         assert "Shape" in vars(sh), "Missing Shape base class."
     
@@ -96,33 +30,33 @@ class TestTask21:
         assert isinstance(sh1, sh.Shape)
         assert sh1 is sh_black
 
-class TestTask22:
-    def test_square_exists(self, sh):
-        assert "Square" in vars(sh), "Missing Square derived class."
-    def test_square_inheritance(self, sh):
-        assert sh.Shape in sh.Square.__bases__
+class TestTask24:
+    def test_rectangle_exists(self, sh):
+        assert "Rectangle" in vars(sh), "Missing Rectangle derived class."
+    def test_rectangle_inheritance(self, sh):
+        assert sh.Shape in sh.Rectangle.__bases__
         #mro = sh.Square.mro()
         #assert len(mro) == 3
         #assert issubclass(mro[1], sh.Shape), "Square should inherit from Shape"
-    def test_square_init_method_present(self, sq_namespace):
-        assert "__init__" in sq_namespace
-    def test_square_area_method_present(self, sq_namespace):
-        assert "area" in sq_namespace
-    def test_square_colour_method_absent(self, sq_namespace):
-        assert "colour" not in sq_namespace, "Square should not have a colour method as it should come from the base class Shape"
-    def test_square_set_method_absent(self, sq_namespace):
-        assert "set" not in sq_namespace, "Square should not have a set method as it should come from the base class Shape"
-    def test_square_area(self, square):
-        assert square.area() == 144
-    def test_square_colour(self, square):
-        assert hasattr(square, "colour")
-        assert isinstance(square.colour(), str)
-    def test_square_set(self, square):
-        assert hasattr(square, "set")
-        square.set("Green")
-        assert square.colour() == "Green"
-        square.set("Blue")
-        assert square.colour() == "Blue"
+    def test_rectangle_init_method_present(self, re_namespace):
+        assert "__init__" in re_namespace
+    def test_rectangle_area_method_present(self, re_namespace):
+        assert "area" in re_namespace
+    def test_rectangle_colour_method_absent(self, re_namespace):
+        assert "colour" not in re_namespace, "Rectangle should not have a colour method as it should come from the base class Shape"
+    def test_rectangle_set_method_absent(self, re_namespace):
+        assert "set" not in re_namespace, "Rectangle should not have a set method as it should come from the base class Shape"
+    def test_rectangle_area(self, rectangle):
+        assert rectangle.area() == 132
+    def test_rectangle_colour(self, rectangle):
+        assert hasattr(rectangle, "colour")
+        assert isinstance(rectangle.colour(), str)
+    def test_rectangle_set(self, rectangle):
+        assert hasattr(rectangle, "set")
+        rectangle.set("Green")
+        assert rectangle.colour() == "Green"
+        rectangle.set("Blue")
+        assert rectangle.colour() == "Blue"
 
     def test_triangle_exists(self, sh):
         assert "Triangle" in vars(sh), "Missing Triangle derived class."
@@ -150,60 +84,63 @@ class TestTask22:
         triangle.set("Blue")
         assert triangle.colour() == "Blue"
 
-    def test_circle_exists(self, sh):
-        assert "Circle" in vars(sh), "Missing Circle derived class."
-    def test_circle_inheritance(self, sh):
-        mro = sh.Circle.mro()
+    def test_ellipse_exists(self, sh):
+        assert "Ellipse" in vars(sh), "Missing Circle derived class."
+    def test_ellipse_inheritance(self, sh):
+        mro = sh.Ellipse.mro()
         assert len(mro) == 3
         assert issubclass(mro[1], sh.Shape), "Circle should inherit from Shape"
-    def test_circle_init_method_present(self, ci_namespace):
-        assert "__init__" in ci_namespace
-    def test_circle_area_method_present(self, ci_namespace):
-        assert "area" in ci_namespace
-    def test_circle_colour_method_absent(self, ci_namespace):
-        assert "colour" not in ci_namespace, "Circle should not have a colour method as it should come from the base class Shape"
-    def test_circle_set_method_absent(self, ci_namespace):
-        assert "set" not in ci_namespace, "Circle should not have a set method as it should come from the base class Shape"
-    def test_circle_area(self, circle):
-        assert circle.area() == np.pi * 25.
-    def test_circle_colour(self, circle):
-        assert hasattr(circle, "colour")
-        assert isinstance(circle.colour(), str)
-    def test_circle_set(self, circle):
-        assert hasattr(circle, "colour")
-        circle.set("Green")
-        assert circle.colour() == "Green"
-        circle.set("Blue")
-        assert circle.colour() == "Blue"
+    def test_ellipse_init_method_present(self, el_namespace):
+        assert "__init__" in el_namespace
+    def test_circle_area_method_present(self, el_namespace):
+        assert "area" in el_namespace
+    def test_ellipse_colour_method_absent(self, el_namespace):
+        assert "colour" not in el_namespace, "Circle should not have a colour method as it should come from the base class Shape"
+    def test_ellipse_set_method_absent(self, el_namespace):
+        assert "set" not in el_namespace, "Circle should not have a set method as it should come from the base class Shape"
+    def test_ellipse_area(self, ellipse):
+        assert ellipse.area() == np.pi * 5. * 6.
+    def test_ellipse_colour(self, ellipse):
+        assert hasattr(ellipse, "colour")
+        assert isinstance(ellipse.colour(), str)
+    def test_ellipse_set(self, ellipse):
+        assert hasattr(ellipse, "colour")
+        ellipse.set("Green")
+        assert ellipse.colour() == "Green"
+        ellipse.set("Blue")
+        assert ellipse.colour() == "Blue"
 
-class TestTask24:
+
+class TestTask26:
     def test_function_exists(self, sh_funcs):
         assert len(sh_funcs) != 0, "Missing function to make Shapes Red."
         assert len(sh_funcs) == 1, "Too many functions to determine which makes Shapes Red"
 
-    def test_make_shape_red(self, red_func, sh_black, square, triangle, circle):
-        square.set("Black")
+    def test_make_shape_red(self, red_func, sh_black, rectangle, triangle, ellipse):
+        rectangle.set("Black")
         triangle.set("Black")
-        circle.set("Black")
+        ellipse.set("Black")
         correct = ("Red", "red")
         assert sh_black.colour() not in correct
-        assert square.colour() not in correct
+        assert rectangle.colour() not in correct
         assert triangle.colour() not in correct
-        assert circle.colour() not in correct
+        assert ellipse.colour() not in correct
 
         red_func(sh_black)
-        red_func(square)
+        red_func(rectangle)
         red_func(triangle)
-        red_func(circle)
+        red_func(ellipse)
         assert sh_black.colour() in correct
-        assert square.colour() in correct
+        assert rectangle.colour() in correct
         assert triangle.colour() in correct
-        assert circle.colour() in correct
+        assert ellipse.colour() in correct
+
     def test_ignore_non_shapes(self, red_func):
         assert red_func(12) == 12
         assert red_func([1., 2., 3.]) == [1., 2., 3.]
 
-class TestTask25:
+
+class TestTask27:
     def test_counter_exists(self, sh_namespace):
         assert "num_red" in sh_namespace
     def test_zero_initial_count(self, sh):
@@ -227,23 +164,23 @@ class TestTask25:
         sh1.set("Black")
         assert sh.Shape.num_red == 0
 
-    def test_square_counter_absent(self, sq_namespace):
-        assert "num_red" not in sq_namespace
+    def test_rectangle_counter_absent(self, re_namespace):
+        assert "num_red" not in re_namespace
     def test_triangle_counter_absent(self, tr_namespace):
         assert "num_red" not in tr_namespace
-    def test_circle_counter_absent(self, ci_namespace):
-        assert "num_red" not in ci_namespace
+    def test_ellipse_counter_absent(self, el_namespace):
+        assert "num_red" not in el_namespace
 
-    def test_square_set_increment(self, sh, square):
-        assert sh.Square.num_red == 0
-        square.set("Red")
-        assert sh.Square.num_red == 1
-    def test_square_set_decrement(self, sh, square):
-        assert sh.Square.num_red == 0
-        square.set("Red")
-        assert sh.Square.num_red == 1
-        square.set("Green")
-        assert sh.Square.num_red == 0
+    def test_square_set_increment(self, sh, rectangle):
+        assert sh.Shape.num_red == 0
+        rectangle.set("Red")
+        assert sh.Shape.num_red == 1
+    def test_rectangle_set_decrement(self, sh, rectangle):
+        assert sh.Shape.num_red == 0
+        rectangle.set("Red")
+        assert sh.Shape.num_red == 1
+        rectangle.set("Green")
+        assert sh.Shape.num_red == 0
     def test_triangle_set_increment(self, sh, triangle):
         assert sh.Triangle.num_red == 0
         triangle.set("Red")
@@ -254,13 +191,13 @@ class TestTask25:
         assert sh.Triangle.num_red == 1
         triangle.set("Green")
         assert sh.Triangle.num_red == 0
-    def test_circle_set_increment(self, sh, circle):
-        assert sh.Circle.num_red == 0
-        circle.set("Red")
-        assert sh.Circle.num_red == 1
-    def test_circle_set_decrement(self, sh, circle):
-        assert sh.Circle.num_red == 0
-        circle.set("Red")
-        assert sh.Circle.num_red == 1
-        circle.set("Green")
-        assert sh.Circle.num_red == 0
+    def test_circle_set_increment(self, sh, ellipse):
+        assert sh.Shape.num_red == 0
+        ellipse.set("Red")
+        assert sh.Shape.num_red == 1
+    def test_circle_set_decrement(self, sh, ellipse):
+        assert sh.Shape.num_red == 0
+        ellipse.set("Red")
+        assert sh.Shape.num_red == 1
+        ellipse.set("Green")
+        assert sh.Shape.num_red == 0
