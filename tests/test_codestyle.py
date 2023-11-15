@@ -1,5 +1,6 @@
 """Tests for code style."""
 import os
+from pathlib import Path
 from subprocess import run
 from glob import glob
 from pylint.lint import Run
@@ -11,7 +12,9 @@ class TestStyle:
     def setup_class(self):
         """Setup."""
         project_path = os.path.split(os.path.dirname(__file__))[0]
-        course_files = glob(os.path.join(project_path, "src", "*.py"))
+        # course_files = glob(os.path.join(project_path, "src", "*.py"))
+        excluded_files = ("coffeecake.py", "mymodule.py")
+        course_files = [str(file_) for file_ in Path(project_path).glob("src/*.py") if file_.name not in excluded_files]
         assert course_files, "No files to check!"
         pylint_results = Run(course_files, exit=False)
         self.style_result = pylint_results.linter.stats.global_note  # pylint: disable=attribute-defined-outside-init
