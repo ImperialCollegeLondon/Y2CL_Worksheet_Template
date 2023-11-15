@@ -1,54 +1,1694 @@
 {
   "tests": [
     {
-      "name": "code style",
+      "name": "Test style - 20pc",
       "setup": "",
-      "run": "pytest -vv tests/test_codestyle.py",
+      "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_20pc",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 1
     },
     {
-      "name": "test Relativity",
+      "name": "Test style - 40pc",
       "setup": "",
-      "run": "pytest -vv tests/test_relativity.py",
+      "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_40pc",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 1
     },
     {
-      "name": "test Shapes",
+      "name": "Test style - 60pc",
       "setup": "",
-      "run": "pytest -vv tests/test_shapes.py",
+      "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_60pc",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 1
     },
     {
-      "name": "test MyModule",
+      "name": "Test style - 80pc",
       "setup": "",
-      "run": "pytest -vv tests/test_mymodule.py",
+      "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_80pc",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 1
     },
     {
-      "name": "test Coffeecake",
+      "name": "Test style - 90pc",
       "setup": "",
-      "run": "pytest -vv tests/test_coffeecake.py",
+      "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_90pc",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 1
+    },
+    {
+      "name": "Test task10 - a val",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_a_val",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - b val",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_b_val",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func1 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func1_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func1 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func1_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func2 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func2_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func2 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func2_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func3 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func3_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func3 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func3_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func4 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func4_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - func4 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_func4_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - module exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_module_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - var a",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_var_a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task10 - var b",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask10::test_var_b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func5 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func5_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func5 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func5_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func5 output type",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func5_output_type",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func6 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func6_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func6 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func6_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task11 - func6 output type",
+      "setup": "",
+      "run": "pytest -vv tests/test_coffeecake.py::TestTask11::test_func6_output_type",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task7 - module exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask7::test_module_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo1 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo1_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo1 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo1_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo2 exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo2_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo2 output",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo2_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - fibo output",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_fibo_output",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - import np",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_import_np",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - phi present",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_phi_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task8 - sqrt5 present",
+      "setup": "",
+      "run": "pytest -vv tests/test_mymodule.py::TestTask8::test_sqrt5_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - FourVector docstring",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_FourVector_docstring",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - FourVector exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_FourVector_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - Fourvector attributes",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_Fourvector_attributes",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - default construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_default_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - keyword construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_keyword_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - object independence",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask12::test_object_independence",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task13 - repr",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask13::test_repr",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task13 - str",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask13::test_str",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - ct method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_ct_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - getters",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_getters",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - hidden attributed",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_hidden_attributed",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - r method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_r_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - setct method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_setct_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - setr method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_setr_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task14 - setters",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask14::test_setters",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task15 - copy method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask15::test_copy_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task15 - equality",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask15::test_equality",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task15 - identity",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask15::test_identity",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - add",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_add",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - add method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_add_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - iadd",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_iadd",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - iadd method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_iadd_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - isub",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_isub",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - isub method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_isub_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - sub",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_sub",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task16 - sub method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask16::test_sub_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task17 - inner",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask17::test_inner",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task17 - inner method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask17::test_inner_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task17 - magsquare",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask17::test_magsquare",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task17 - magsquare method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask17::test_magsquare_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task18 - boost method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask18::test_boost_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task18 - magsquare",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask18::test_magsquare",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task19 - too few dims",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask19::test_too_few_dims",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task19 - too many dims",
+      "setup": "",
+      "run": "pytest -vv tests/test_relativity.py::TestTask19::test_too_many_dims",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - chaining",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_chaining",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - colour method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_colour_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - getter",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_getter",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - hidden attributes",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_hidden_attributes",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - set method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_set_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - setter",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_setter",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task23 - shape exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask23::test_shape_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - circle area method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_circle_area_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse area",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_area",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse colour",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_colour",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse colour method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_colour_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse inheritance",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_inheritance",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse init method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_init_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse set",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_set",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - ellipse set method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_ellipse_set_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle area",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_area",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle area method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_area_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle colour",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_colour",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle colour method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_colour_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle inheritance",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_inheritance",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle init method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_init_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle set",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_set",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - rectangle set method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_rectangle_set_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle area",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_area",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle area method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_area_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle colour",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_colour",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle colour method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_colour_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle inheritance",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_inheritance",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle init method present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_init_method_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle set",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_set",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task24 - triangle set method absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask24::test_triangle_set_method_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task26 - function exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask26::test_function_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task26 - ignore non shapes",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask26::test_ignore_non_shapes",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task26 - make shape red",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask26::test_make_shape_red",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - circle set decrement",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_circle_set_decrement",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - circle set increment",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_circle_set_increment",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - construction doesnt set",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_construction_doesnt_set",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - construction sets",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_construction_sets",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - counter exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_counter_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - ellipse counter absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_ellipse_counter_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - rectangle counter absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_rectangle_counter_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - rectangle set decrement",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_rectangle_set_decrement",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - set decrements",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_set_decrements",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - set increments",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_set_increments",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - square set increment",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_square_set_increment",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - triangle counter absent",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_triangle_counter_absent",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - triangle set decrement",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_triangle_set_decrement",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - triangle set increment",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_triangle_set_increment",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task27 - zero initial count",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask27::test_zero_initial_count",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - circle exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_circle_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - circle single param",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_circle_single_param",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - eqtriangle exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_eqtriangle_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - eqtriangle single param",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_eqtriangle_single_param",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - square exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_square_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task28 - square single param",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes.py::TestTask28::test_square_single_param",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task29 - module exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_module_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task29 - not reimplemented",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_not_reimplemented",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task29 - shape in scope",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_shape_in_scope",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task30 - area calculation",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_area_calculation",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task30 - area present",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_area_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task30 - construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task30 - regularpolygon exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_regularpolygon_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - eqtriangle construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_eqtriangle_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - eqtriangle exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_eqtriangle_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - pentagon construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_pentagon_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - pentagon exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_pentagon_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - square construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_square_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task31 - square exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_square_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task32 - angles method exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_angles_method_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task32 - can tessellate",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_can_tessellate",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task32 - interior angle",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_interior_angle",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task32 - tessellate exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_tessellate_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - engine construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_engine_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - engine exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_engine_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - engine init exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_engine_init_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - engine start present",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_engine_start_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - engine start prints",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_engine_start_prints",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task20 - vehicles exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask20::test_vehicles_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task21 - car calls engine",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask21::test_car_calls_engine",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task21 - car construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask21::test_car_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task21 - car exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask21::test_car_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task21 - car start present",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask21::test_car_start_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task21 - car start prints",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask21::test_car_start_prints",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - call safety check",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_call_safety_check",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - car shift down",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_car_shift_down",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - car shift down calls",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_car_shift_down_calls",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - car shift up calls",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_car_shift_up_calls",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - car shift up exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_car_shift_up_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - gear method exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_gear_method_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - gear return",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_gear_return",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - shift down exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_shift_down_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - shift down implementation",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_shift_down_implementation",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - shift up exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_shift_up_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - shift up implementation",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_shift_up_implementation",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - transmission construction",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_transmission_construction",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - transmission exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_transmission_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - type method exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_type_method_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test task22 - type return",
+      "setup": "",
+      "run": "pytest -vv tests/test_vehicles.py::TestTask22::test_type_return",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }
