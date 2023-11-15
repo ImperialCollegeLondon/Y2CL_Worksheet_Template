@@ -9,6 +9,7 @@
 	"**/tests/": true,
 	"**/LICENSE": true
     },
+    "editor.tabCompletion": "on",
     "python.testing.pytestArgs": [
         "tests", "-vv"
     ],
