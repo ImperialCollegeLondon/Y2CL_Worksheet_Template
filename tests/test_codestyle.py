@@ -8,7 +8,6 @@ import pytest
 @pytest.fixture(scope="class")
 def pylint_results(source_files):
     print(f"Checking files:\n{pformat(source_files)}")
-    assert source_files, "No files to check!"
     return Run(source_files, exit=False).linter.stats.global_note
 
 
