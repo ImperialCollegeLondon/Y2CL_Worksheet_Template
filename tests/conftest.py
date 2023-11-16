@@ -1,5 +1,6 @@
 from importlib import import_module
 from types import FunctionType
+from pathlib import Path
 import pytest
 
 @pytest.fixture(scope="module")
@@ -92,3 +93,12 @@ def trns_namespace(vh):
     if "Transmission" not in vars(vh):
         return {}
     return vars(vh.Transmission)
+
+@pytest.fixture(scope="module")
+def source_files():
+    excluded_files = ("coffeecake.py", "mymodule.py")
+    return [str(file_) for file_ in Path(__file__).parent.parent.glob("src/*.py") if file_.name not in excluded_files]
+
+@pytest.fixture(scope="module")
+def source_files_str(source_files):
+    return ' '.join(source_files)
