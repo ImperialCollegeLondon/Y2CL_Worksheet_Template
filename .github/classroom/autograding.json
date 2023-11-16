@@ -1,6 +1,26 @@
 {
   "tests": [
     {
+      "name": "Test documentation - documentation present",
+      "setup": "",
+      "run": "pytest -vv tests/test_codestyle.py::TestDocumentation::test_documentation_present",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test documentation - documentation style",
+      "setup": "",
+      "run": "pytest -vv tests/test_codestyle.py::TestDocumentation::test_documentation_style",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
       "name": "Test style - 20pc",
       "setup": "",
       "run": "pytest -vv tests/test_codestyle.py::TestStyle::test_20pc",
