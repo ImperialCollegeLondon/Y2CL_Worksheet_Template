@@ -20,5 +20,6 @@ dependencies = [
   "numpy",
   "pylint",
   "pydocstyle",
-  "pytest"
+  "pytest",
+  "darglight"
 ]
