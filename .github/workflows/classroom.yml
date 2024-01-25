@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: create virtualenv
+        run: python3.11 -m venv venv
       - name: update pip setuptools and wheel
         run: sudo python -m pip install --upgrade pip setuptools wheel
       - name: Install local code in edit mode
