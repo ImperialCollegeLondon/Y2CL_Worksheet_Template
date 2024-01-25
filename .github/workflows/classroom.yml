@@ -20,5 +20,5 @@ jobs:
       - name: update pip setuptools and wheel
         run: python3.11 -m pip install --upgrade pip setuptools wheel
       - name: Install local code in edit mode
-        run: python3.11 -m pip install --user -e .
+        run: python3.11 -m pip install -e .
       - uses: education/autograding@v1
