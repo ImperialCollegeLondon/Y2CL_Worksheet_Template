@@ -17,10 +17,8 @@ jobs:
         uses: actions/setup-python@v5.0.0
         with:
           python-version: '3.11'
-      - name: Setup virtualenv
-        run: python3.11 -m venv venv
       - name: update pip setuptools and wheel
-        run: venv/bin/python -m pip install --upgrade pip setuptools wheel
+        run: python3.11 -m pip install --upgrade pip setuptools wheel
       - name: Install local code in edit mode
-        run: venv/bin/python -m pip install -e .
+        run: python3.11 -m pip install --user -e .
       - uses: education/autograding@v1
