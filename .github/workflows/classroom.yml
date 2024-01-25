@@ -22,5 +22,5 @@ jobs:
       - name: update pip setuptools and wheel
         run: venv/bin/python -m pip install --upgrade pip setuptools wheel
       - name: Install local code in edit mode
-        run: venv/bin/python -m pip install --user -e .
+        run: venv/bin/python -m pip install -e .
       - uses: education/autograding@v1
