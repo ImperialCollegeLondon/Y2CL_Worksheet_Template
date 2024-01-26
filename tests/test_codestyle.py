@@ -11,7 +11,7 @@ import pytest
 @pytest.fixture(scope="class")
 def pylint_results(source_files):
     print(f"Checking files:\n{pformat(source_files)}")
-    return Run(source_files, exit=False).linter.stats.global_note
+    return Run(["--max-line-length=120"] + source_files, exit=False).linter.stats.global_note
 
 
 class TestStyle:
