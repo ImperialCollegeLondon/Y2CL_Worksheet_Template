@@ -12,13 +12,10 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v5.0.0
+      - name: Set-up for grading
+        uses: ImperialCollegeLondon/y2cl-setup@main
         with:
-          python-version: '3.11'
-      - name: update pip setuptools and wheel
-        run: python3.11 -m pip install --upgrade pip setuptools wheel
-      - name: Install local code in edit mode
-        run: python3.11 -m pip install -e .
+          project: Worksheet
+          src_dir: src
+          python_version: 3.11
       - uses: education/autograding@v1
