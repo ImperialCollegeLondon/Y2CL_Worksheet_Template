@@ -1283,7 +1283,7 @@
     {
       "name": "Test task29 - module exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_module_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask29::test_module_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1293,7 +1293,7 @@
     {
       "name": "Test task29 - not reimplemented",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_not_reimplemented",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask29::test_not_reimplemented",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1303,7 +1303,7 @@
     {
       "name": "Test task29 - shape in scope",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask29::test_shape_in_scope",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask29::test_shape_in_scope",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1313,7 +1313,7 @@
     {
       "name": "Test task30 - area calculation",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_area_calculation",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_area_calculation",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1323,7 +1323,7 @@
     {
       "name": "Test task30 - area present",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_area_present",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_area_present",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1333,7 +1333,7 @@
     {
       "name": "Test task30 - construction",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_construction",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_construction",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1343,7 +1343,7 @@
     {
       "name": "Test task30 - regularpolygon exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask30::test_regularpolygon_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_regularpolygon_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1353,7 +1353,7 @@
     {
       "name": "Test task31 - eqtriangle construction",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_eqtriangle_construction",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_eqtriangle_construction",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1363,7 +1363,7 @@
     {
       "name": "Test task31 - eqtriangle exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_eqtriangle_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_eqtriangle_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1373,7 +1373,7 @@
     {
       "name": "Test task31 - pentagon construction",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_pentagon_construction",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_pentagon_construction",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1383,7 +1383,7 @@
     {
       "name": "Test task31 - pentagon exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_pentagon_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_pentagon_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1393,7 +1393,7 @@
     {
       "name": "Test task31 - square construction",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_square_construction",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_square_construction",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1403,7 +1403,7 @@
     {
       "name": "Test task31 - square exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask31::test_square_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask31::test_square_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1413,7 +1413,7 @@
     {
       "name": "Test task32 - angles method exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_angles_method_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask32::test_angles_method_exists",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1423,7 +1423,7 @@
     {
       "name": "Test task32 - can tessellate",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_can_tessellate",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask32::test_can_tessellate",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1433,7 +1433,7 @@
     {
       "name": "Test task32 - interior angle",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_interior_angle",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask32::test_interior_angle",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -1443,7 +1443,7 @@
     {
       "name": "Test task32 - tessellate exists",
       "setup": "",
-      "run": "pytest -vv tests/test_shape_abstraction.py::TestTask32::test_tessellate_exists",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask32::test_tessellate_exists",
       "input": "",
       "output": "",
       "comparison": "included",
