@@ -14,6 +14,7 @@ import sys
 import json
 import logging
 import platform
+from pathlib import Path
 from subprocess import run
 logging.basicConfig(level=logging.INFO, format="%(levelname)-7s : %(message)s")
 
@@ -36,7 +37,11 @@ run(['git', 'config', '--global', 'user.name', name], check=False, stdout=sys.st
 logging.info("Creating (and updating) new python virtual environment...")
 run([sys.executable, "-m", "venv", "venv"], check=False, stdout=sys.stdout, stderr=sys.stderr)
 
-VENV_INTERPRETER = 'venv/Scripts/python.exe' if SYSTEM == "Windows" else r"venv\bin\python"
+VENV_PATH = Path('venv')
+if SYSTEM == "Windows":
+    VENV_INTERPRETER = VENV_PATH.joinpath('Scripts', 'python.exe')
+else:
+    VENV_INTERPRETER = VENV_PATH.joinpath('bin', 'python')
 logging.info("Using virtual env interpreter: %s", VENV_INTERPRETER)
 run([VENV_INTERPRETER, '-m', 'pip', 'install', '--upgrade', 'pip', 'setuptools', 'wheel'],
     check=False, stdout=sys.stdout, stderr=sys.stderr)
@@ -48,12 +53,13 @@ logging.info("Setup complete!")
 
 logging.info("Hiding setup script from workspace...")
 try:
-    with open(".vscode/settings.json", "r", encoding='utf-8') as settings_file:
+    SETTINGS_FILE = Path('.vscode').joinpath("settings.json")
+    with open(SETTINGS_FILE, "r", encoding='utf-8') as settings_file:
         settings = json.load(settings_file)
 
     settings["files.exclude"]['**/setup_workspace.py'] = True
 
-    with open(".vscode/settings.json", "w", encoding='utf-8') as settings_file:
+    with open(SETTINGS_FILE, "w", encoding='utf-8') as settings_file:
         json.dump(settings, settings_file, indent=4)
     logging.info("Setup script sucessfully hiden.")
 except:  # noqa: E722  # pylint: disable=bare-except
