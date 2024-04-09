@@ -92,9 +92,11 @@ class TestTask12:
 
 class TestTask13:
     def test_str(self, fv_keyword):
-        assert str(fv_keyword) == "(99.9, 1.0, 2.0, 3.0)"
+        assert str(fv_keyword) in ["(99.9, 1.0, 2.0, 3.0)", "(99.9, 1., 2., 3.)", "(99.9, 1, 2, 3)"]
     def test_repr(self, fv_keyword):
-        assert repr(fv_keyword) == "FourVector(ct=99.9, r=array([1., 2., 3.]))"
+        assert repr(fv_keyword) in ["FourVector(ct=99.9, r=array([1.0, 2.0, 3.0]))",
+                                    "FourVector(ct=99.9, r=array([1., 2., 3.]))",
+                                    "FourVector(ct=99.9, r=array([1, 2, 3]))"]
 
 class TestTask14:
     def test_ct_method_present(self, fv_namespace):

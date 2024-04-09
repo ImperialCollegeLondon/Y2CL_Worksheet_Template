@@ -5,7 +5,7 @@ import pytest
 
 @pytest.fixture(scope="module")
 def sh():
-    return import_module("shapes")
+    return import_module("src.shapes")
 
 @pytest.fixture
 def sh_namespace(sh):
@@ -69,12 +69,12 @@ def red_func(sh_funcs):
 
 @pytest.fixture()
 def sh_ab():
-    return import_module("shapes_abstraction")
+    return import_module("src.shapes_abstraction")
 
 
 @pytest.fixture()
 def vh():
-    return import_module("vehicles")
+    return import_module("src.vehicles")
 
 @pytest.fixture
 def en_namespace(vh):

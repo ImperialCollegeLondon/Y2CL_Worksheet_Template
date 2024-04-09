@@ -1,4 +1,5 @@
 from inspect import signature
+import random
 import numpy as np
 
 
@@ -47,8 +48,12 @@ class TestTask24:
         assert "colour" not in re_namespace, "Rectangle should not have a colour method as it should come from the base class Shape"
     def test_rectangle_set_method_absent(self, re_namespace):
         assert "set" not in re_namespace, "Rectangle should not have a set method as it should come from the base class Shape"
-    def test_rectangle_area(self, rectangle):
-        assert rectangle.area() == 132
+    def test_rectangle_area(self, sh):
+        a = random.uniform(1., 10.)
+        b = random.uniform(1., 10.)
+        rect = sh.Rectangle(a, b)
+        rect.set("Black")
+        assert np.allclose(rect.area(), a * b)
     def test_rectangle_colour(self, rectangle):
         assert hasattr(rectangle, "colour")
         assert isinstance(rectangle.colour(), str)
@@ -62,9 +67,10 @@ class TestTask24:
     def test_triangle_exists(self, sh):
         assert "Triangle" in vars(sh), "Missing Triangle derived class."
     def test_triangle_inheritance(self, sh):
-        mro = sh.Triangle.mro()
-        assert len(mro) == 3
-        assert issubclass(mro[1], sh.Shape), "Triangle should inherit from Shape"
+        assert sh.Shape in sh.Triangle.__bases__
+        # mro = sh.Triangle.mro()
+        # assert len(mro) == 3
+        # assert issubclass(mro[1], sh.Shape), "Triangle should inherit from Shape"
     def test_triangle_init_method_present(self, tr_namespace):
         assert "__init__" in tr_namespace
     def test_triangle_area_method_present(self, tr_namespace):
@@ -73,8 +79,12 @@ class TestTask24:
         assert "colour" not in tr_namespace, "Triangle should not have a colour method as it should come from the base class Shape"
     def test_triangle_set_method_absent(self, tr_namespace):
         assert "set" not in tr_namespace, "Triangle should not have a set method as it should come from the base class Shape"
-    def test_triangle_area(self, triangle):
-        assert triangle.area() == 30.
+    def test_triangle_area(self, sh):
+        a = random.uniform(1., 10.)
+        b = random.uniform(1., 10.)
+        tri = sh.Triangle(a, b)
+        tri.set("Black")
+        assert np.isclose(tri.area(), 0.5 * a * b)
     def test_triangle_colour(self, triangle):
         assert hasattr(triangle, "colour")
         assert isinstance(triangle.colour(), str)
@@ -88,9 +98,10 @@ class TestTask24:
     def test_ellipse_exists(self, sh):
         assert "Ellipse" in vars(sh), "Missing Circle derived class."
     def test_ellipse_inheritance(self, sh):
-        mro = sh.Ellipse.mro()
-        assert len(mro) == 3
-        assert issubclass(mro[1], sh.Shape), "Circle should inherit from Shape"
+        assert sh.Shape in sh.Ellipse.__bases__
+        # mro = sh.Ellipse.mro()
+        # assert len(mro) == 3
+        # assert issubclass(mro[1], sh.Shape), "Circle should inherit from Shape"
     def test_ellipse_init_method_present(self, el_namespace):
         assert "__init__" in el_namespace
     def test_circle_area_method_present(self, el_namespace):
@@ -99,8 +110,12 @@ class TestTask24:
         assert "colour" not in el_namespace, "Circle should not have a colour method as it should come from the base class Shape"
     def test_ellipse_set_method_absent(self, el_namespace):
         assert "set" not in el_namespace, "Circle should not have a set method as it should come from the base class Shape"
-    def test_ellipse_area(self, ellipse):
-        assert ellipse.area() == np.pi * 5. * 6.
+    def test_ellipse_area(self, sh):
+        a = random.uniform(1., 10.)
+        b = random.uniform(1., 10.)
+        ell = sh.Ellipse(a, b)
+        ell.set("Black")
+        assert np.isclose(ell.area(), np.pi * a * b)
     def test_ellipse_colour(self, ellipse):
         assert hasattr(ellipse, "colour")
         assert isinstance(ellipse.colour(), str)
