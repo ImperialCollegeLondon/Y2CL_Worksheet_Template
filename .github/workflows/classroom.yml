@@ -18,4 +18,4 @@ jobs:
           project: Worksheet
           src_dir: src
           python_version: 3.11
-      - uses: education/autograding@v1
+      - uses: alexanderrichards/autograding@v2.0.0
