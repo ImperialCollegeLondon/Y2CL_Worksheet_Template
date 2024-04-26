@@ -12,10 +12,11 @@ class TestTask29:
         assert "Shape" in vars(sh_ab)
 
     def test_not_reimplemented(self, sh, sh_ab, monkeypatch):
-
+        sh_rel = import_module("shapes")
         shape_mock = MagicMock()
         with monkeypatch.context() as mpc:
             mpc.setattr(sh, "Shape", shape_mock)
+            mpc.setattr(sh_rel, "Shape", shape_mock)
             reload(sh_ab)
             assert sh_ab.Shape is shape_mock
         reload(sh_ab)
