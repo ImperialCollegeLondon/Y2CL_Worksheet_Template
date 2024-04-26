@@ -6,7 +6,7 @@ import numpy as np
 
 @pytest.fixture(scope="module")
 def rel():
-    return import_module("relativity")
+    return import_module("src.relativity")
 
 @pytest.fixture
 def fv_namespace(rel):
