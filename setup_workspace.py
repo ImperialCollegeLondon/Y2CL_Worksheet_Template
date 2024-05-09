@@ -61,6 +61,8 @@ try:
 
     with open(SETTINGS_FILE, "w", encoding='utf-8') as settings_file:
         json.dump(settings, settings_file, indent=4)
+    run(['git', 'update-index', '--assume-unchanged', str(SETTINGS_FILE)],
+        check=False, stdout=sys.stdout, stderr=sys.stderr)
     logging.info("Setup script sucessfully hiden.")
 except:  # noqa: E722  # pylint: disable=bare-except
     logging.error("Failed to hide setup script.")
