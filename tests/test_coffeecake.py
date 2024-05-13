@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture(scope="module")
 def cc():
-    return import_module("coffeecake")
+    return import_module("src.coffeecake")
 
 class TestTask10:
     def test_module_exists(self, cc):

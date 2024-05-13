@@ -4,7 +4,7 @@ import numpy as np
 
 @pytest.fixture(scope="module")
 def mm():
-    return import_module("mymodule")
+    return import_module("src.mymodule")
 
 class TestTask7:
     def test_module_exists(self, mm):

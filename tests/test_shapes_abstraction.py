@@ -4,6 +4,7 @@ from importlib import import_module, reload
 from unittest.mock import MagicMock
 import numpy as np
 
+
 class TestTask30:
     def test_module_exists(self, sh_ab):
         pass
@@ -12,7 +13,7 @@ class TestTask30:
         assert "Shape" in vars(sh_ab)
 
     def test_not_reimplemented(self, sh, sh_ab, monkeypatch):
-        sh_rel = import_module("shapes")
+        sh_rel = import_module("src.shapes")
         shape_mock = MagicMock()
         with monkeypatch.context() as mpc:
             mpc.setattr(sh, "Shape", shape_mock)
