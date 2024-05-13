@@ -261,6 +261,56 @@
       "points": 1
     },
     {
+      "name": "Test task12 - generator type",
+      "setup": "",
+      "run": "pytest -vv tests/test_genpolar.py::TestTask12::test_generator_type",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - genpolar exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_genpolar.py::TestTask12::test_genpolar_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - rtrings args",
+      "setup": "",
+      "run": "pytest -vv tests/test_genpolar.py::TestTask12::test_rtrings_args",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - rtrings correct",
+      "setup": "",
+      "run": "pytest -vv tests/test_genpolar.py::TestTask12::test_rtrings_correct",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
+      "name": "Test task12 - rtrings exists",
+      "setup": "",
+      "run": "pytest -vv tests/test_genpolar.py::TestTask12::test_rtrings_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
       "name": "Test task7 - module exists",
       "setup": "",
       "run": "pytest -vv tests/test_mymodule.py::TestTask7::test_module_exists",
