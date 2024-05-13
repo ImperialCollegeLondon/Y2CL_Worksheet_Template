@@ -4,7 +4,7 @@ from importlib import import_module, reload
 from unittest.mock import MagicMock
 import numpy as np
 
-class TestTask29:
+class TestTask30:
     def test_module_exists(self, sh_ab):
         pass
 
@@ -22,7 +22,7 @@ class TestTask29:
         reload(sh_ab)
 
 
-class TestTask30:
+class TestTask31:
     def test_regularpolygon_exists(self, sh_ab):
         assert "RegularPolygon" in vars(sh_ab)
 
@@ -39,7 +39,7 @@ class TestTask30:
         assert np.isclose(sh_ab.RegularPolygon(n_sides=5, side_length=5).area(), 43.01193501472418)
 
 
-class TestTask31:
+class TestTask32:
     def test_eqtriangle_exists(self, sh_ab):
         assert "EquilateralTriangle" in vars(sh_ab)
 
@@ -62,7 +62,7 @@ class TestTask31:
         sh_ab.Pentagon(side_length=5, colour="black")
 
 
-class TestTask32:
+class TestTask33:
     def test_angles_method_exists(self, sh_ab):
         assert "interior_angle" in vars(sh_ab.RegularPolygon)
 

@@ -3,7 +3,7 @@ import random
 import numpy as np
 
 
-class TestTask23:
+class TestTask24:
     def test_shape_exists(self, sh):
         assert "Shape" in vars(sh), "Missing Shape base class."
     
@@ -32,7 +32,7 @@ class TestTask23:
         assert isinstance(sh1, sh.Shape)
         assert sh1 is sh_black
 
-class TestTask24:
+class TestTask25:
     def test_rectangle_exists(self, sh):
         assert "Rectangle" in vars(sh), "Missing Rectangle derived class."
     def test_rectangle_inheritance(self, sh):
@@ -127,7 +127,7 @@ class TestTask24:
         assert ellipse.colour() == "Blue"
 
 
-class TestTask26:
+class TestTask27:
     def test_function_exists(self, sh_funcs):
         assert len(sh_funcs) != 0, "Missing function to make Shapes Red."
         assert len(sh_funcs) == 1, "Too many functions to determine which makes Shapes Red"
@@ -156,7 +156,7 @@ class TestTask26:
         assert red_func([1., 2., 3.]) == [1., 2., 3.]
 
 
-class TestTask27:
+class TestTask28:
     def test_counter_exists(self, sh_namespace):
         assert "num_red" in sh_namespace
     def test_zero_initial_count(self, sh):
@@ -219,7 +219,7 @@ class TestTask27:
         assert sh.Shape.num_red == 0
 
 
-class TestTask28:
+class TestTask29:
     def test_eqtriangle_exists(self, sh):
         assert "EquilateralTriangle" in vars(sh)
 

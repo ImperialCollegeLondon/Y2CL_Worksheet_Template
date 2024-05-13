@@ -5,7 +5,7 @@ from inspect import signature
 from unittest.mock import MagicMock
 import pytest
 
-class TestTask20:
+class TestTask21:
     def test_vehicles_exists(self, vh):
         pass
 
@@ -30,7 +30,7 @@ class TestTask20:
         sys.stdout = tmp_stdout
 
 
-class TestTask21:
+class TestTask22:
     def test_car_exists(self, vh):
         assert "Car" in vars(vh), "Missing Car class."
 
@@ -74,7 +74,7 @@ class TestTask21:
         sys.stdout = tmp_stdout
 
 
-class TestTask22:
+class TestTask23:
     def test_transmission_exists(self, vh):
         assert "Transmission" in vars(vh)
 

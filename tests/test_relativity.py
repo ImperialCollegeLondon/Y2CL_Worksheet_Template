@@ -23,7 +23,7 @@ def fv_keyword(rel):
     return rel.FourVector(ct=99.9, r=[1.0, 2.0, 3.0])
 
 
-class TestTask12:
+class TestTask13:
     def test_FourVector_exists(self, rel):
         assert "FourVector" in vars(rel), "Class FourVector missing from relativity module."
 
@@ -90,7 +90,7 @@ class TestTask12:
     def test_object_independence(self, fv_default, fv_keyword):
         assert fv_default is not fv_keyword, "Should be possible to create independent objcets from your class"
 
-class TestTask13:
+class TestTask14:
     def test_str(self, fv_keyword):
         assert str(fv_keyword) in ["(99.9, 1.0, 2.0, 3.0)", "(99.9, 1., 2., 3.)", "(99.9, 1, 2, 3)"]
     def test_repr(self, fv_keyword):
@@ -98,7 +98,7 @@ class TestTask13:
                                     "FourVector(ct=99.9, r=array([1., 2., 3.]))",
                                     "FourVector(ct=99.9, r=array([1, 2, 3]))"]
 
-class TestTask14:
+class TestTask15:
     def test_ct_method_present(self, fv_namespace):
         assert "ct" in fv_namespace, "Accessor (getter) method for timelike attribute missing"
 
@@ -142,7 +142,7 @@ class TestTask14:
         assert isinstance(timelike_value, float)
         assert isinstance(spacelike_value, np.ndarray)
 
-class TestTask15:
+class TestTask16:
     def test_copy_method_present(self, fv_namespace):
         assert "copy" in fv_namespace, "Missing copy method."
 
@@ -155,7 +155,7 @@ class TestTask15:
         assert fv_new.ct() == fv_keyword.ct(), "Timelike component not copied properly"
         assert np.all(fv_new.r() == fv_keyword.r()), "Spacelike component not copied properly"
 
-class TestTask16:
+class TestTask17:
     def test_add_method_present(self, fv_namespace):
         assert "__add__" in fv_namespace, "Missing __add__ method."
     def test_iadd_method_present(self, fv_namespace):
@@ -209,7 +209,7 @@ class TestTask16:
         assert fv1.ct() == 99.0
         assert np.all(fv1.r() == np.array([1., 2., 3.]))
 
-class TestTask17:
+class TestTask18:
     def test_inner_method_present(self, fv_namespace):
         assert "inner" in fv_namespace, "Missing inner method."
     def test_magsquare_method_present(self, fv_namespace):
@@ -223,7 +223,7 @@ class TestTask17:
         assert fv1.magsquare() == 9787.0
         assert fv1.magsquare() == fv1.inner(fv1)
 
-class TestTask18:
+class TestTask19:
     def test_boost_method_present(self, fv_namespace):
         assert "boost" in fv_namespace, "Missing boost method."
 
@@ -233,7 +233,7 @@ class TestTask18:
         fv2 = fv1.boost(0.5)
         assert np.isclose(fv2.magsquare(), 9787.0)
 
-class TestTask19:
+class TestTask20:
     def test_too_many_dims(self, rel):
         with pytest.raises(Exception):
             rel.FourVector(ct=99, r=[1.0, 2.0, 3.0, 4.0])
