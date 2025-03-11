@@ -1,6 +1,9 @@
 
 import inspect as ins
 from importlib import import_module, reload
+import re
+from textwrap import dedent
+from inspect import getsource
 from unittest.mock import MagicMock
 import numpy as np
 
@@ -21,6 +24,20 @@ class TestTask30:
             reload(sh_ab)
             assert sh_ab.Shape is shape_mock
         reload(sh_ab)
+
+    def test_no_relative_imports(self, sh_ab):
+        RELATIVE_IMPORTS_REGEX = re.compile(r"^\s*((?:import|from)\s+[.]?shapes.*?)$", re.MULTILINE)
+        relative_imports = RELATIVE_IMPORTS_REGEX.findall(getsource(sh_ab))
+        relative_imports_str = f"\n{' '*8}".join(f"{i+1}: {import_line.strip()}" for i, import_line in enumerate(relative_imports))
+        msg = dedent(f"""
+        {len(relative_imports)} Relative imports found in shapes_abstraction.py:
+        {'-'*20}
+        {relative_imports_str}
+        {'-'*20}
+        These should use absolute imports i.e. src.<module>
+
+        """)
+        assert not relative_imports, msg
 
 
 class TestTask31:
