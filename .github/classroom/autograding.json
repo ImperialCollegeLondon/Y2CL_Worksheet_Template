@@ -1341,6 +1341,16 @@
       "points": 1
     },
     {
+      "name": "Test task30 - no relative imports",
+      "setup": "",
+      "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_no_relative_imports",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 1
+    },
+    {
       "name": "Test task30 - not reimplemented",
       "setup": "",
       "run": "pytest -vv tests/test_shapes_abstraction.py::TestTask30::test_not_reimplemented",
