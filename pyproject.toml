@@ -20,8 +20,5 @@ dependencies = [
   "numpy",
   "scipy",
   "matplotlib",
-  "pylint",
-  "pydocstyle",
-  "pytest",
-  "darglint"
+  "pytest"
 ]
