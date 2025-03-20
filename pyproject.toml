@@ -3,7 +3,7 @@ name = "y2cl_worksheet"
 version = "0.1.0"
 description = "Imperial Year 2 Physics Computing Lab."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = {file = "LICENSE.txt"}
 authors = [
   {name = "Alexander Richards", email = "a.richards@imperial.ac.uk"}
