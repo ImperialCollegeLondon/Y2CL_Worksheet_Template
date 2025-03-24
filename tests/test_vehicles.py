@@ -146,7 +146,7 @@ class TestTask23:
 
     def test_car_shift_down(self, ca_namespace):
         assert "shift_down" in ca_namespace
- 
+
     def test_car_shift_down_calls(self, vh, monkeypatch):
         sh_down_mock = MagicMock()
         monkeypatch.setattr(vh.Transmission, "shift_down", sh_down_mock)

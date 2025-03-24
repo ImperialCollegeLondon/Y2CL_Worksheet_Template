@@ -162,13 +162,15 @@ class TestTask28:
     def test_zero_initial_count(self, sh):
         assert sh.Shape.num_red == 0
     def test_construction_doesnt_set(self, sh):
-        sh.Shape("Black")
+        sh1 = sh.Shape("Black")
         assert sh.Shape.num_red == 0
+        del sh1
     def test_construction_sets(self, sh):
         assert sh.Shape.num_red == 0
         sh1 = sh.Shape("Red")
         assert sh.Shape.num_red == 1
         sh1.set("Black")  # make sure it's not incremented for next test. Could have decremented in __del__ destructor instead.
+        del sh1
     def test_set_increments(self, sh, sh_black):
         assert sh.Shape.num_red == 0
         sh_black.set("Red")
@@ -179,7 +181,7 @@ class TestTask28:
         assert sh.Shape.num_red == 1
         sh1.set("Black")
         assert sh.Shape.num_red == 0
-
+        del sh1
     def test_rectangle_counter_absent(self, re_namespace):
         assert "num_red" not in re_namespace
     def test_triangle_counter_absent(self, tr_namespace):

@@ -3,7 +3,7 @@ from types import FunctionType
 from pathlib import Path
 import pytest
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="function")
 def sh():
     return import_module("src.shapes")
 
@@ -13,11 +13,12 @@ def sh_namespace(sh):
         return {}
     return vars(sh.Shape)
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def sh_black(sh):
     sh1 = sh.Shape("Black")
     yield sh1  # incase the default has been set to red. This would mess up the counting tests.
     sh1.set("Black")
+    del sh1
 
 @pytest.fixture
 def re_namespace(sh):
@@ -35,26 +36,29 @@ def el_namespace(sh):
         return {}
     return vars(sh.Ellipse)
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def rectangle(sh):
     sh1 = sh.Rectangle(12, 11)
     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
     yield sh1
     sh1.set("Black")
+    del sh1
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def triangle(sh):
     sh1 = sh.Triangle(12, 5)
     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
     yield sh1
     sh1.set("Black")
+    del sh1
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def ellipse(sh):
     sh1 = sh.Ellipse(5., 6.)
     sh1.set("Black")  # incase the default has been set to red. This would mess up the counting tests.
     yield sh1
     sh1.set("Black")
+    del sh1
 
 @pytest.fixture
 def sh_funcs(sh):
