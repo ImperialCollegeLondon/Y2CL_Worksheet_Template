@@ -22,3 +22,6 @@ dependencies = [
   "matplotlib",
   "pytest"
 ]
+
+[tool.setuptools]
+packages = ["src"]
