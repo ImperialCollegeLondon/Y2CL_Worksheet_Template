@@ -1,6 +1,11 @@
 name: GitHub Classroom Workflow
 
+# necessary as autograding-grading-reporter@v1 still not using Node24
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
 on: [push]
+
 
 permissions:
   checks: write
@@ -8,14 +13,23 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    name: Autograding
+  Autograding:
     runs-on: ubuntu-latest
     steps:
       - name: Set-up for grading
-        uses: ImperialCollegeLondon/y2cl-setup@main
+        uses: ImperialCollegeLondon/y2cl-setup@v2.0.1
         with:
           project: Worksheet
           src_dir: src
-          python_version: 3.12
-      - uses: alexanderrichards/autograding@v2.0.0
+          python_version: 3.13
+      - name: run grading
+        id: run-tests
+        uses: alexanderrichards/pytest-ghclassroom-autograder@v1.0.0
+        with:
+          timeout: 10
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          RUN-TESTS_RESULTS: "${{steps.run-tests.outputs.result}}"
+        with:
+          runners: run-tests
