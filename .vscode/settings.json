@@ -3,13 +3,14 @@
         "**/.*": true,
         "**/__pycache__": true,
         "**/venv": true,
-        "**/settings.json": true,
-	"**/pyproject.toml": true,
-	"**/*egg-info": true,
-	"**/tests/": true,
-	"**/LICENSE": true
+        "**/pyproject.toml": true,
+        "**/*.egg-info": true,
+        "**/tests": true,
+	    "**/LICENSE": true,
+        "**/__init__.py": true
     },
     "editor.tabCompletion": "on",
+    "editor.inlineSuggest.enabled": false,
     "python.testing.pytestArgs": [
         "tests", "-vv"
     ],
